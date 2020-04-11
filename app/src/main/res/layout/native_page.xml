@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/native_info"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="28sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/open_about_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8.0dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="8.0dp"
+                    android:text="关于我们"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/open_native"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8.0dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="8.0dp"
+                    android:text="@string/open_native"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/open_about_us"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/open_flutter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8.0dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="8.0dp"
+                    android:text="@string/open_flutter"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/open_native"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/open_flutter_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dp"
+                    android:layout_marginTop="8.0dp"
+                    android:layout_marginRight="8.0dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="8.0dp"
+                    android:text="@string/open_flutter_fragment"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/open_about_us" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <include layout="@layout/layout_guide_line"/>
+            <!--竖直屏障示例-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c22"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="#f3f3f3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv221"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="10dp"
+                    android:text="an"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv222"
+                    style="@style/ConSampleText"
+                    android:layout_marginTop="4dp"
+                    android:text="RustFisher"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv221" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_marginTop="4dp"
+                    android:text="没有以此作为参考，不管这个有多长"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv222" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="end"
+                    app:constraint_referenced_ids="tv221 ,tv222" />
+
+                <TextView
+                    android:id="@+id/tv223"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="10dp"
+                    android:text=".com"
+                    app:layout_constraintStart_toEndOf="@id/barrier1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--调整约束偏差-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c23"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="#f3f3f3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:text="Rust"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:text="0.33,0.33"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.1" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:text="0.8,0.8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--调整视图尺寸-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c24"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="2dp"
+                android:background="#009C8D">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/v50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="R"
+                    app:layout_constraintDimensionRatio="5:2"
+                    app:layout_constraintBottom_toTopOf="@id/h50"
+                    app:layout_constraintEnd_toStartOf="@id/v50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="U"
+                    app:layout_constraintBottom_toTopOf="@id/h50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/v50"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="S"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/v50"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/h50" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="T"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/v50"
+                    app:layout_constraintTop_toBottomOf="@id/h50" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0">
+
+                <!-- 引导线约束: 相对父layout 按比例定位 -->
+
+                <!-- 垂直引导线 Guideline -->
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/g1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/g2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/t1"
+                    style="@style/ConSampleText"
+                    android:text="垂直的1/3引导线后"
+                    app:layout_constraintStart_toStartOf="@id/g1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    style="@style/ConSampleText"
+                    android:text="垂直的1/3引导线前"
+                    app:layout_constraintEnd_toStartOf="@id/g1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/t3"
+                    style="@style/ConSampleText"
+                    android:layout_marginTop="2dp"
+                    android:text="垂直的1/3引导线居中"
+                    app:layout_constraintEnd_toEndOf="@id/g1"
+                    app:layout_constraintStart_toStartOf="@id/g1"
+                    app:layout_constraintTop_toBottomOf="@id/t2" />
+
+                <TextView
+                    android:id="@+id/th1"
+                    style="@style/ConSampleText"
+                    android:text="水平的1/2引导线居中"
+                    app:layout_constraintBottom_toBottomOf="@id/g2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/g2" />
+
+                <TextView
+                    android:id="@+id/th2"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="2dp"
+                    android:text="水平的1/2引导线上面"
+                    app:layout_constraintBottom_toBottomOf="@id/g2"
+                    app:layout_constraintStart_toEndOf="@id/th1" />
+
+                <TextView
+                    android:id="@+id/th3"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="2dp"
+                    android:text="水平的1/2引导线下面"
+                    app:layout_constraintStart_toEndOf="@id/th1"
+                    app:layout_constraintTop_toBottomOf="@id/g2" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gv75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.75" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gh75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.75" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="2dp"
+                    android:text="(0.75,0.75)"
+                    app:layout_constraintBottom_toBottomOf="@id/gh75"
+                    app:layout_constraintEnd_toEndOf="@id/gv75"
+                    app:layout_constraintStart_toStartOf="@id/gv75"
+                    app:layout_constraintTop_toTopOf="@id/gh75" />
+
+                <TextView
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="2dp"
+                    android:text="(0.33, 0.75)"
+                    app:layout_constraintBottom_toBottomOf="@id/gh75"
+                    app:layout_constraintEnd_toEndOf="@id/g1"
+                    app:layout_constraintStart_toStartOf="@id/g1"
+                    app:layout_constraintTop_toTopOf="@id/gh75" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="10dp"
+                    android:text="an"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="10dp"
+                    android:text="Rust"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+                    app:layout_constraintStart_toEndOf="@+id/tv1" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    style="@style/ConSampleText"
+                    android:layout_marginStart="10dp"
+                    android:text="Fisher"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+                    app:layout_constraintStart_toEndOf="@+id/tv2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <include layout="@layout/layout_tbsn"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

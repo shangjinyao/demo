@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flutter aar</string>
+    <string name="open_native">打开原生页面</string>
+    <string name="open_flutter">打开flutter页面</string>
+    <string name="open_flutter_fragment">打开flutter fragment 页面</string>
+    <string name="native_info">纯原生页面</string>
+</resources>
